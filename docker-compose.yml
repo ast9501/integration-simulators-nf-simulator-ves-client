@@ -3,7 +3,7 @@ version: '3.5'
 services:
 
   mongo:
-    image: mongo
+    image: mongo:4.2
     restart: always
     networks:
       - nf-simulator-network
@@ -28,7 +28,7 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: zXcVbN123!
 
   ves-client:
-    image: onap/org.onap.integration.nfsimulator.vesclient
+    image: onap/org.onap.integration.nfsimulator.vesclient:1.0.1
     ports:
       - "5000:5000"
     networks:
